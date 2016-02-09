@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aware.plugin.cmu_esm"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Aware"
+        tools:replace="android:icon">
+
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+        <activity android:name=".Settings" android:exported="true" android:theme="@style/Theme.Aware" />
+        <service android:name=".Plugin" android:exported="true" android:label="CMU ESM" />
+        <service android:name=".QuestionUpdater" android:exported="true" android:label="ScheduleDownloader" />
+
+    </application>
+
+</manifest>
